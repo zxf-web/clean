@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0，user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/animate.css"/> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <script src="./bootstrap/js/jquery.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- <script src="./js/echarts.min.js"></script> -->
+    <!-- <script src="./js/echarts.js"></script> -->
+    <style>
+      body,ul{
+        margin:0;
+        padding:0;
+        list-style: none;
+        
+      }
+      a{
+        text-decoration:none;
+      }
+      .view a{
+        color:white;
+      }
+      @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(.3);
+            -ms-transform: scale(.3);
+            transform: scale(.3);
+        }
+        50% {
+            opacity: 1;
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        70% {
+            -webkit-transform: scale(.9);
+            -ms-transform: scale(.9);
+            transform: scale(.9);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+      }
+      .bounce_In{
+        animation:bounceIn 1s;
+      }
+      
+      @keyframes bounceInDown {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-2000px);
+            -ms-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translateY(30px);
+            -ms-transform: translateY(30px);
+            transform: translateY(30px);
+        }
+        80% {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+      }
+      .bounce_InDown{
+        animation:bounceInDown 1s;
+      }
+      @keyframes bounceInLeft {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(-2000px);
+            -ms-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translateX(30px);
+            -ms-transform: translateX(30px);
+            transform: translateX(30px);
+        }
+        80% {
+            -webkit-transform: translateX(-10px);
+            -ms-transform: translateX(-10px);
+            transform: translateX(-10px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+        }
+      }
+      .bounce_InLeft{
+        animation:bounceInLeft 1s;
+      }
+      @keyframes bounceInRight {
+          0% {
+              opacity: 0;
+              -webkit-transform: translateX(2000px);
+              -ms-transform: translateX(2000px);
+              transform: translateX(2000px);
+          }
+          60% {
+              opacity: 1;
+              -webkit-transform: translateX(-30px);
+              -ms-transform: translateX(-30px);
+              transform: translateX(-30px);
+          }
+          80% {
+              -webkit-transform: translateX(10px);
+              -ms-transform: translateX(10px);
+              transform: translateX(10px);
+          }
+          100% {
+              -webkit-transform: translateX(0);
+              -ms-transform: translateX(0);
+              transform: translateX(0);
+          }
+      }
+      .bounce_InRight{
+        animation:bounceInRight 1s;
+      }
+      @keyframes bounceInUp {
+          0% {
+              opacity: 0;
+              -webkit-transform: translateY(2000px);
+              -ms-transform: translateY(2000px);
+              transform: translateY(2000px);
+          }
+          60% {
+              opacity: 1;
+              -webkit-transform: translateY(-30px);
+              -ms-transform: translateY(-30px);
+              transform: translateY(-30px);
+          }
+          80% {
+              -webkit-transform: translateY(10px);
+              -ms-transform: translateY(10px);
+              transform: translateY(10px);
+          }
+          100% {
+              -webkit-transform: translateY(0);
+              -ms-transform: translateY(0);
+              transform: translateY(0);
+          }
+      }
+      .bounce_InUp{
+        animation:bounceInUp 1s;
+      }
+      
+      @keyframes flipInX {
+          0% {
+              -webkit-transform: perspective(400px) rotateX(90deg);
+              -ms-transform: perspective(400px) rotateX(90deg);
+              transform: perspective(400px) rotateX(90deg);
+              opacity: 0;
+          }
+          40% {
+              -webkit-transform: perspective(400px) rotateX(-10deg);
+              -ms-transform: perspective(400px) rotateX(-10deg);
+              transform: perspective(400px) rotateX(-10deg);
+          }
+          70% {
+              -webkit-transform: perspective(400px) rotateX(10deg);
+              -ms-transform: perspective(400px) rotateX(10deg);
+              transform: perspective(400px) rotateX(10deg);
+          }
+          100% {
+              -webkit-transform: perspective(400px) rotateX(0deg);
+              -ms-transform: perspective(400px) rotateX(0deg);
+              transform: perspective(400px) rotateX(0deg);
+              opacity: 1;
+          }
+      }
+      .flip_InX{
+        animation:flipInX 1s;
+      }
+      @keyframes rollIn {
+          0% {
+              opacity: 0;
+              -webkit-transform: translateX(-100%) rotate(-120deg);
+              -ms-transform: translateX(-100%) rotate(-120deg);
+              transform: translateX(-100%) rotate(-120deg);
+          }
+          100% {
+              opacity: 1;
+              -webkit-transform: translateX(0px) rotate(0deg);
+              -ms-transform: translateX(0px) rotate(0deg);
+              transform: translateX(0px) rotate(0deg);
+          }
+      }
+      .roll_In{
+        animation:rollIn 1s;
+      }
+      @keyframes lightSpeedIn {
+          0% {
+              -webkit-transform: translateX(100%) skewX(-30deg);
+              -ms-transform: translateX(100%) skewX(-30deg);
+              transform: translateX(100%) skewX(-30deg);
+              opacity: 0;
+          }
+          60% {
+              -webkit-transform: translateX(-20%) skewX(30deg);
+              -ms-transform: translateX(-20%) skewX(30deg);
+              transform: translateX(-20%) skewX(30deg);
+              opacity: 1;
+          }
+          80% {
+              -webkit-transform: translateX(0%) skewX(-15deg);
+              -ms-transform: translateX(0%) skewX(-15deg);
+              transform: translateX(0%) skewX(-15deg);
+              opacity: 1;
+          }
+          100% {
+              -webkit-transform: translateX(0%) skewX(0deg);
+              -ms-transform: translateX(0%) skewX(0deg);
+              transform: translateX(0%) skewX(0deg);
+              opacity: 1;
+          }
+      }
+      .lightSpeed_In{
+        animation:lightSpeedIn 1s;
+      }
+
+      /* 删除按钮样式 */
+      .del{
+        background-color:red;
+        color:white;
+        border:none;
+        outline:none;
+      }
+      /* 编辑按钮样式 */
+      .exit{
+        /* background-color: #AFFA58; */
+        background-color: #1ECF85;
+        color:white;
+        border:none;
+        outline:none;
+        margin-right:10px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #f8f8f8;">
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
